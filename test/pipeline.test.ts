@@ -10,7 +10,7 @@ describe("WeatherApiStack (pipeline)", () => {
   test("creates exactly one CodePipeline", () => {
     template.resourceCountIs("AWS::CodePipeline::Pipeline", 1);
   });
-
+//
   test("deploys to dev first, then prod", () => {
     const pipeline = Object.values(
       template.findResources("AWS::CodePipeline::Pipeline")
